@@ -18,13 +18,20 @@
       --rangitikei: #3a6b3a;
     }
 
+    html, body {
+      height: 100%;
+    }
+
     body {
       font-family: 'Source Sans 3', sans-serif;
       background: var(--bg);
       color: var(--navy);
       font-size: 17px;
       line-height: 1.55;
-      padding: 24px;
+      padding: 32px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .grid {
@@ -56,10 +63,10 @@
     .card--rangitikei .card-accent { background: var(--rangitikei); }
 
     .card-body {
-      padding: 28px 32px 28px 28px;
+      padding: 32px 36px 36px 32px;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 14px;
       flex: 1;
     }
 
@@ -71,7 +78,7 @@
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
 
     .card--waitarere  .card-icon { background: #e0f0f0; color: var(--waitarere); }
@@ -103,23 +110,33 @@
     }
 
     .card-btn {
-      margin-top: 8px;
-      padding: 12px 20px;
+      margin-top: 12px;
+      padding: 10px 22px;
       background: var(--navy);
       color: #fff;
       font-family: 'Source Sans 3', sans-serif;
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 600;
       border: none;
       border-radius: 4px;
       cursor: pointer;
-      text-align: center;
-      transition: background 0.15s ease;
-      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      align-self: flex-start;
+      transition: background 0.15s ease, transform 0.1s ease;
+      letter-spacing: 0.02em;
     }
 
     .card-btn:hover {
       background: #2c3e47;
+      transform: translateX(2px);
+    }
+
+    .card-btn svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
     }
   </style>
 </head>
@@ -142,7 +159,8 @@
         <div class="card-title">Waitārere Beach Community Project</div>
         <p class="card-desc">The Waitārere Beach community pays a targeted rate to Horizons to control exotic plants and restore native plants on the dunes. This programme has focused on environmental restoration in areas along the dunes, residential beach frontage, and the banks of the Wairarawa Stream from the beach upstream to Wairarawa Lagoon.</p>
         <button class="card-btn" onclick="window.parent.location.href='https://experience.arcgis.com/experience/de50b07324bb418ca0c85ff43705ff0d/page/WBP-Page?draft=true'">
-          ← Open Dashboard
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Open Dashboard
         </button>
       </div>
     </div>
@@ -162,7 +180,8 @@
         <div class="card-title">Rangitīkei Environment Group</div>
         <p class="card-desc">Rangitīkei residents pay a targeted rate to Horizons for the control of Old Man's Beard in their district. The Rangitīkei Environment Group carries out this control work. The group was founded in 2001, and its primary goal is to address the infestation of Old Man's Beard in the Rangitīkei area.</p>
         <button class="card-btn" onclick="window.parent.location.href='https://experience.arcgis.com/experience/de50b07324bb418ca0c85ff43705ff0d/page/REG-Page?draft=true'">
-          ← Open Dashboard
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Open Dashboard
         </button>
       </div>
     </div>
